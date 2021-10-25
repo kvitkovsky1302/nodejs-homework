@@ -1,6 +1,7 @@
 # nodejs-homework
 
 # We receive and display the entire list of contacts in the form of a table
+https://github.com/kvitkovsky1302/nodejs-homework/blob/nodejs-hw1/images/listContacts.png
 
 # Get contact by Id
 
