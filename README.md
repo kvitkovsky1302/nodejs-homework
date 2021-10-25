@@ -7,7 +7,7 @@
 <img width="907" alt="listContacts" src="https://github.com/kvitkovsky1302/nodejs-homework/blob/nodejs-hw1/images/getContactById.png">
 
 # Add contact
-<img width="907" alt="https://github.com/kvitkovsky1302/nodejs-homework/blob/nodejs-hw1/images/addContact.png">
+<img width="907" alt="listContacts" src="https://github.com/kvitkovsky1302/nodejs-homework/blob/nodejs-hw1/images/addContact.png">
 
 # Delete contact
-<img width="907" alt="https://github.com/kvitkovsky1302/nodejs-homework/blob/nodejs-hw1/images/deleteContact.png">
+<img width="907" alt="listContacts" src="https://github.com/kvitkovsky1302/nodejs-homework/blob/nodejs-hw1/images/deleteContact.png">
