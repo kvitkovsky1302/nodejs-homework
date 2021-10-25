@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 const chalk = require("chalk");
-const { v4 } = require("uuid");
+const crypto = require("crypto");
 
 const contactsPath = path.join(__dirname, "./db/contacts.json");
 
@@ -13,33 +13,27 @@ async function listContacts() {
 
 async function getContactById(contactId) {
   const allContacts = await listContacts();
-  const contact = allContacts.find((item) => contactId === item.id);
+  const contact = allContacts.find((item) => contactId === item.id.toString());
   return contact;
 }
 
 async function removeContact(contactId) {
   const allContacts = await listContacts();
-  const id = allContacts.findIndex((item) => contactId === item.id);
+  const id = allContacts.findIndex((item) => contactId === item.id.toString());
   if (id === -1) {
     return console.log(chalk.red("Incorrect contactId. Try again, plese!"));
   }
   const updateContacts = allContacts.splice(id, 1);
-  const newContacts = await fs.writeFile(
-    contactsPath,
-    JSON.stringify(allContacts)
-  );
+  await fs.writeFile(contactsPath, JSON.stringify(allContacts, null, 2));
   return updateContacts;
 }
 
 async function addContact(name, email, phone) {
   const allContacts = await listContacts();
-  const newContact = { ...allContacts, id: v4() };
+  const newContact = { id: crypto.randomUUID(), name, email, phone };
   allContacts.push(newContact);
-  await updateProducts(allContacts);
-  return newProduct;
+  await fs.writeFile(contactsPath, JSON.stringify(allContacts, null, 2));
+  return newContact;
 }
 
-listContacts();
-// getContactById(8);
-removeContact(7);
 module.exports = { listContacts, getContactById, removeContact, addContact };

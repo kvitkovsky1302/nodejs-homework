@@ -1,5 +1,4 @@
 {
-
   "name": "nodejs-homework",
   "description": "",
   "version": "1.0.0",
@@ -20,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/kvitkovsky1302/nodejs-homework/issues"
   },
-  "homepage": "https://github.com/kvitkovsky1302/nodejs-homework#readme"
+  "homepage": "https://github.com/kvitkovsky1302/nodejs-homework#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0"
+  }
 }
