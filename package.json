@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-homework",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvitkovsky1302/nodejs-homework.git"
+  },
+  "author": "Kvitkovsky Maxim",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "bugs": {
+    "url": "https://github.com/kvitkovsky1302/nodejs-homework/issues"
+  },
+  "homepage": "https://github.com/kvitkovsky1302/nodejs-homework#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0"
+  }
+}
